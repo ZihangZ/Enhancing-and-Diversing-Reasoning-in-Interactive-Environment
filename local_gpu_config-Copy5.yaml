@@ -1,0 +1,54 @@
+lamorel_args:
+  log_level: info
+  allow_subgraph_use_whith_gradient: false
+  distributed_setup_args:
+    n_rl_processes: 1
+    n_llm_processes: 1
+  accelerate_args:
+    config_file: /root/autodl-tmp/lamorel/examples/configs/accelerate/default_config.yaml
+    machine_rank: 0
+    main_process_ip: 127.0.0.1
+    num_machines: 2
+  llm_args:
+    model_type: seq2seq # seq2seq or causal
+    model_path: /root/autodl-tmp/flan-t5-large # /root/autodl-tmp/Llama-2-7b-chat-hf or /root/autodl-tmp/flan-t5-large
+    pretrained: true
+    minibatch_size: 192
+    pre_encode_inputs: true
+    parallelism:
+      use_gpu: true
+      model_parallelism_size: 1
+      synchronize_gpus_after_scoring: false
+      empty_cuda_cache_after_scoring: false
+rl_script_args:
+  path: /root/autodl-tmp/lamorel/examples/PPO_finetuning/main-Copy5.py
+  name_environment: "BabyAI-GoToLocalS6N4-v0" #'BabyAI-GoToRedBall-v0', 'BabyAI-MixedTestLocal-v0', 'BabyAI-PutNextLocalS6N4-v0', 'BabyAI-PickupDistDebug-v0', 'BabyAI-ActionObjDoor-v0', "BabyAI-GoToObjS6-v0", "BabyAI-GoToLocalS6N4-v0", "BabyAI-UnlockLocalDist-v0", "BabyAI-PickUpThenGoToLocal-v0"
+  do_sample: True
+  temperature: 1.0
+  epochs: 8
+  steps_per_epoch: 128
+  minibatch_size: 64
+  gradient_batch_size: 16
+  ppo_epochs: 4
+  lam: 0.99
+  gamma: 0.99
+  target_kl: 0.01
+  max_ep_len: 1000
+  lr: 1e-4
+  entropy_coef: 0.01
+  value_loss_coef: 0.5
+  clip_eps: 0.2
+  max_grad_norm: 0.5
+  save_freq: 100
+  output_dir: /root/autodl-tmp/outputs
+  action_space: ["turn_left","turn_right","go_forward","pick_up","drop","toggle"]  # ["turn_left","turn_right","go_forward"] or ["turn_left","turn_right","go_forward","pick_up","drop","toggle"]
+  thought_type: "subgoal" # "subgoal", 'high_level', 'highlevel_subgoal' or empty
+  invalid_num: 3
+  cot_prompt: True
+  reflection: False
+  explore_rate: 0.2 # prob of adding a random choice for reflection answer option
+  highlevel_auto_answer: True
+  rollout_num: 3
+  short_term_memory: False
+  memory_length: 3
+  log_dir: /root/autodl-tmp/outputs/log
