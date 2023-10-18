@@ -1,0 +1,12 @@
+[2023-09-25 17:04:43,039][lamorel_logger][INFO] - Init rl group for process 1
+[2023-09-25 17:04:43,039][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:2 to store for rank: 1
+[2023-09-25 17:04:43,060][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:2 with 2 nodes.
+[2023-09-25 17:04:43,060][lamorel_logger][INFO] - Init llm group for process 1
+[2023-09-25 17:04:43,062][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:3 to store for rank: 1
+[2023-09-25 17:04:43,062][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:3 with 2 nodes.
+[2023-09-25 17:04:43,062][lamorel_logger][INFO] - Init rl-llm group for process 1
+[2023-09-25 17:04:43,079][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:4 to store for rank: 1
+[2023-09-25 17:04:43,079][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:4 with 2 nodes.
+[2023-09-25 17:04:43,080][lamorel_logger][INFO] - Devices on process 1 (index 0): [0]
+[2023-09-25 17:04:47,889][lamorel_logger][INFO] - Launching LLM server process 1
+[2023-09-25 17:22:47,628][lamorel_logger][INFO] - Closing LLM server process 1
