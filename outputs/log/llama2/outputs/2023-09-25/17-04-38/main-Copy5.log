@@ -1,9 +1,0 @@
-[2023-09-25 17:04:43,054][lamorel_logger][INFO] - Init rl group for process 0
-[2023-09-25 17:04:43,056][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:2 to store for rank: 0
-[2023-09-25 17:04:43,056][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:2 with 2 nodes.
-[2023-09-25 17:04:43,057][lamorel_logger][INFO] - Init llm group for process 0
-[2023-09-25 17:04:43,057][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:3 to store for rank: 0
-[2023-09-25 17:04:43,067][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:3 with 2 nodes.
-[2023-09-25 17:04:43,067][lamorel_logger][INFO] - Init rl-llm group for process 0
-[2023-09-25 17:04:43,079][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:4 to store for rank: 0
-[2023-09-25 17:04:43,089][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:4 with 2 nodes.
