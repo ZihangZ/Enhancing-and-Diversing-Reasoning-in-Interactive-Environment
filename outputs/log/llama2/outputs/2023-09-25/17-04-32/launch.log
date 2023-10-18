@@ -1,0 +1,2 @@
+[2023-09-25 17:04:33,143][root][INFO] - Using nproc_per_node=1.
+[2023-09-25 17:04:33,145][torch.distributed.elastic.rendezvous.static_tcp_rendezvous][INFO] - Creating TCPStore as the c10d::Store implementation
